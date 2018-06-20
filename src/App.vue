@@ -13,6 +13,7 @@
 import Artist from './components/Artist.vue'
 import getArtist from './api'
 import Spinner from './components/Spinner.vue'
+
 export default {
   name: 'app',
   data () {
