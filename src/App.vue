@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="dist/logo.png">
+    <img src="dist/logo.png" style="width: 10%">
     <h1>PlatziMusic</h1>
     <countries :countries="countries" v-on:selectcountry="_handlerCountry" ></countries>
     <spinner v-show="loading" ></spinner>
@@ -13,6 +13,7 @@
 <script>
 import Artist from './components/Artist.vue'
 import getArtist from './api'
+
 import Spinner from './components/Spinner.vue'
 import Countries from './components/Countries.vue'
 
@@ -60,13 +61,17 @@ export default {
 </script>
 
 <style>
+  body {
+    background-color: #FFF;
+    color: #000;
+  }
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+    margin-top: 60px;    
   }
   h1, h2 {
     font-weight: normal;

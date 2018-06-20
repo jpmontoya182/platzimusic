@@ -1,5 +1,5 @@
 <template>
-    <select class="form-control"  v-on:change="onchange">
+    <select class="col-sm-2 form-control"  v-on:change="onchange" style="margin: 0 auto; float: none;">
       <option  v-for="country in countries" :value="country.value"  
       v-bind:key="country.value">{{country.name}}</option>
     </select>
