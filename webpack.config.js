@@ -21,6 +21,8 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader',
+            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
           }
           // other vue-loader options go here
         }
@@ -36,7 +38,15 @@ module.exports = {
         options: {
           name: '[name].[ext]'
         }
+      }, 
+      {
+      test : /\.scss$/,
+      use : [
+          {loader : 'css-loader'},
+          {loader: 'sass-loader'}
+        ]
       }
+
     ]
   },
   resolve: {
