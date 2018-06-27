@@ -1,8 +1,10 @@
 <template>
-    <select class="col-sm-2 form-control"  v-on:change="onchange" style="margin: 0 auto; float: none;">
-      <option  v-for="country in countries" :value="country.value"  
-      v-bind:key="country.value">{{country.name}}</option>
-    </select>
+    <div class="col-lg-4 col-md-4 col-sm-6">
+        <select class="form-control"  v-on:change="onchange" style="margin: 0 auto; float: none;">
+        <option  v-for="country in countries" :value="country.value"  
+        v-bind:key="country.value">{{country.name}}</option>
+        </select>
+    </div>
 </template>
 
 <script>
@@ -18,8 +20,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-    @import '../node_modules/bootstrap/scss/bootstrap.scss';
+<style>
+
 </style>
 
 

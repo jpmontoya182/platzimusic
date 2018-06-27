@@ -2,18 +2,21 @@
   <div id="app">
     <img src="dist/logo.png" style="width: 10%">
     <h1>PlatziMusic</h1>
-    <countries :countries="countries" v-on:selectcountry="_handlerCountry" ></countries>
+    <div class="row">
+      <countries :countries="countries" v-on:selectcountry="_handlerCountry" ></countries>
+    </div>
     <spinner v-show="loading" ></spinner>
-    <ul>
-     <artist v-for="artist in artists" :artist="artist" :key="artist.mbid"></artist>
-    </ul>  
+    <br>
+    <div class="row">
+      <ul>
+        <artist v-for="artist in artists" :artist="artist" :key="artist.mbid"></artist>
+      </ul>  
+    </div>
   </div>
 </template>
-
 <script>
 import Artist from './components/Artist.vue'
 import getArtist from './api'
-
 import Spinner from './components/Spinner.vue'
 import Countries from './components/Countries.vue'
 
@@ -87,6 +90,4 @@ export default {
   a {
     color: #42b983;
   }
-  
-
 </style>
